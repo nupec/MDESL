@@ -13,24 +13,45 @@ library(plyr)
 # "|")
 # Apenas variáveis seleiconadas
 
-variaveis_selecionadas <- c("NU_IDADE_REFERENCIA",
-                            "CO_MUNICIPIO_END",
-                            "CO_UF_END",
-                            "CO_MUNICIPIO_END",
-                            "TP_DEPENDENCIA",
-                            "TP_ETAPA_ENSINO",
+variaveis_selecionadas <- c("NU_ANO_CENSO",
+                            "CO_ENTIDADE",
+                            "NO_ENTIDADE",
+                            "CO_ORGAO_REGIONAL",
+                            "TP_SITUACAO_FUNCIONAMENTO",
                             "CO_REGIAO",
-                            "CO_MESORREGIAO",
                             "CO_UF",
                             "CO_MUNICIPIO",
-                            "CO_DISTRITO")
+                            "TP_DEPENDENCIA",
+                            "TP_LOCALIZACAO",
+                            "TP_LOCALIZACAO_DIFERENCIADA",
+                            "IN_VINCULO_SECRETARIA_EDUCACAO",
+                            "IN_VINCULO_SEGURANCA_PUBLICA",
+                            "IN_VINCULO_SECRETARIA_SAUDE",
+                            "IN_VINCULO_OUTRO_ORGAO",
+                            "TP_CATEGORIA_ESCOLA_PRIVADA",
+                            "IN_CONVENIADA_PP",
+                            "TP_CONVENIO_PODER_PUBLICO",
+                            "IN_MANT_ESCOLA_PRIVADA_EMP",
+                            "IN_MANT_ESCOLA_PRIVADA_ONG",
+                            "IN_MANT_ESCOLA_PRIVADA_OSCIP",
+                            "IN_MANT_ESCOLA_PRIV_ONG_OSCIP",
+                            "IN_MANT_ESCOLA_PRIVADA_SIND",
+                            "IN_MANT_ESCOLA_PRIVADA_SIST_S",
+                            "IN_MANT_ESCOLA_PRIVADA_S_FINS",
+                            "TP_REGULAMENTACAO",
+                            "TP_RESPONSAVEL_REGULAMENTACAO",
+                            "IN_LOCAL_FUNC_PREDIO_ESCOLAR",
+                            "TP_OCUPACAO_PREDIO_ESCOLAR",
+                            "QT_SALAS_UTILIZADAS_DENTRO",
+                            "QT_SALAS_UTILIZADAS_FORA",
+                            "QT_SALAS_UTILIZADAS")
 
-MATRICULA_NORTE <- read_delim("Dados/MATRICULA_NORTE.CSV",
+ESCOLAS <- read_delim("Dados/escolas.csv",
                               "|", escape_double = FALSE,
                               trim_ws = TRUE,
                               col_names = variaveis_selecionadas)
 
-glimpse(MATRICULA_NORTE)
+glimpse(ESCOLAS)
 
 # Seleção do município para cálculo da matricula da educação infantil
 
