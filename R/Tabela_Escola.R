@@ -46,9 +46,15 @@ variaveis_selecionadas <- c("NU_ANO_CENSO",
                             "QT_SALAS_UTILIZADAS")
 
 ESCOLAS <- read_delim("Dados/escolas.csv",
+<<<<<<< HEAD
                       "|", escape_double = FALSE,
                       trim_ws = TRUE,
                       col_names = variaveis_selecionadas)
+=======
+                              "|", escape_double = FALSE,
+                              trim_ws = TRUE,
+                              col_names = variaveis_selecionadas)
+>>>>>>> bc02b21827482da6bb4cf1b2f028aa82939030e0
 
 glimpse(ESCOLAS)
 
